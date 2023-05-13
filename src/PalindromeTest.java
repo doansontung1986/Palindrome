@@ -38,4 +38,40 @@ public class PalindromeTest {
         int expectedNumber = 123221;
         Assert.assertFalse(expectedNumber + " is not Palindrome", Palindrome.isPalindrome(expectedNumber));
     }
+
+    @Test
+    public void verifyEmptyString() {
+        String expectedString = "";
+        Assert.assertTrue("Empty String is Palindrome", Palindrome.isPalindrome(expectedString));
+    }
+
+    @Test
+    public void verifySingleString() {
+        String expectedString = "a";
+        Assert.assertTrue("Single String is Palindrome", Palindrome.isPalindrome(expectedString));
+    }
+
+    @Test
+    public void verifySinglePalindromeNumber() {
+        int expectedNumber = 1;
+        Assert.assertTrue(expectedNumber + " is Palindrome", Palindrome.isPalindrome(expectedNumber));
+    }
+
+    @Test
+    public void verifySingleSpecialCharacterPalindromeString() {
+        String expectedString = "!";
+        Assert.assertTrue(expectedString + " is Palindrome", Palindrome.isPalindrome(expectedString));
+    }
+
+    @Test
+    public void verifySpecialCharactersPalindromeString() {
+        String expectedString = "!@##@!";
+        Assert.assertTrue(expectedString + " is Palindrome", Palindrome.isPalindrome(expectedString));
+    }
+
+    @Test
+    public void verifySpecialCharactersNotPalindromeString() {
+        String expectedString = "!@#$%^";
+        Assert.assertFalse(expectedString + " is not Palindrome", Palindrome.isPalindrome(expectedString));
+    }
 }
