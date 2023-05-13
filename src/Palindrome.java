@@ -5,10 +5,6 @@ public class Palindrome {
         int i = 0;
         int j = length - 1;
 
-        if (length <= 1) {
-            return true;
-        }
-
         while (i < j) {
             if (str.charAt(i) != str.charAt(j)) {
                 return false;
@@ -36,13 +32,5 @@ public class Palindrome {
         } else {
             return false;
         }
-    }
-
-    public static void main(String[] args) {
-        String s = "aabb";
-        System.out.println(isPalindrome(s));
-
-        int number = 4554;
-        System.out.println(isPalindrome(number));
     }
 }
