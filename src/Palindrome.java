@@ -5,6 +5,10 @@ public class Palindrome {
         int i = 0;
         int j = length - 1;
 
+        if (length <= 1) {
+            return true;
+        }
+
         while (i < j) {
             if (str.charAt(i) != str.charAt(j)) {
                 return false;
